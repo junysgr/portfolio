@@ -55,7 +55,7 @@ dayNight.addEventListener("click", () => {
 
 // Typed js
 var typed = new Typed("#text", {
-	strings: ["Developer", "Coder", "Jadooger", "Bazeegar", "Tabaardaar"],
+	strings: ["Developer", "Coder", "Mern Expert", "Bazeegar", "Tabaardaar"],
 	loop: true,
 	typeSpeed: 50,
 	backspeed: 50,
