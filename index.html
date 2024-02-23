@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<title>Potfolio</title>
+	</head>
+	<body>
+		<div class="wraper flex">
+			<div class="scrollToTop-btn active">
+				<i class="fa-solid fa-angle-up"></i>
+			</div>
+			<header class="header flex">
+				<a href="#" class="logo">
+					<span class="drop-cap">D</span>r &nbsp;
+					<span class="drop-cap">J</span>&nbsp;unaid
+				</a>
+
+				<!-- day night icons -->
+				<!-- <div class="day-night">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="22"
+						height="22"
+						fill="currentColor"
+						class="moon"
+						viewBox="0 0 16 16"
+					>
+						<path
+							d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="22"
+						height="22"
+						fill="currentColor"
+						class="sun"
+						viewBox="0 0 16 16"
+					>
+						<path
+							d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+						/>
+					</svg>
+				</div> -->
+				<!--   Day and Night Mode using Slider Toggle switch -->
+				<div class="switch-wraper">
+					<input type="checkbox" id="darkmode-toggle" />
+					<label for="darkmode-toggle" class="darkmode-label">
+						<div class="ball"></div>
+						<div class="ball-icon flex">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="26"
+								height="26"
+								fill="currentColor"
+								class="sun"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+								/>
+							</svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="26"
+								height="26"
+								fill="currentColor"
+								class="moon"
+								viewBox="0 0 16 16"
+							>
+								<path
+									d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+								/>
+							</svg>
+						</div>
+					</label>
+				</div>
+
+				<!-- Nav bar code here -->
+				<nav class="navbar">
+					<ul>
+						<li><a href="#home" class="active">Home</a></li>
+						<li><a href="#about">About </a></li>
+						<li><a href="#skills">Skills </a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact </a></li>
+						<!-- <span></span> -->
+					</ul>
+				</nav>
+				<!-- hamburger navbar -->
+				<div class="hamburger-navbar">
+					<div class="hamburger-icon" onclick="toggle()">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="menu-links">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About </a></li>
+							<li><a href="#skills">Skills </a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#contact">Contact </a></li>
+							<!-- <span></span> -->
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<section id="home" class="flex">
+				<!-- <h1 class="big">Home Section</h1> -->
+				<article class="pic-wraper" data-tilt>
+					<div class="pic-container flex" data-tilt>
+						<img src="resources/jj.jpeg" alt="Me" class="my-pic" />
+						<h2>
+							Mern Stack <br />
+							<span>Developer</span>
+						</h2>
+						<a href="#">Hire me</a>
+					</div>
+				</article>
+
+				<article class="text-wraper">
+					<p class="p-text">Hello, I'm</p>
+					<h1 class="title-text">Dr Junaid</h1>
+					<h2 class="h2-text">I am</h2>
+					<h2 class="h2-text"><span id="text"></span></h2>
+					<br /><br />
+					<div class="btn-container flex">
+						<button class="btn" onclick="window.open('./resources/resume.pdf')">
+							Donload CV
+						</button>
+						<button class="btn" onclick="location.href('./#contact')">
+							Contact Me
+						</button>
+						<button class="new-btn">Click Me</button>
+						<button class="new-btn2">Click Me</button>
+					</div>
+					<div class="social-container flex">
+						<i class="fa-brands fa-linkedin"></i>
+						<i class="fa-brands fa-github"></i>
+					</div>
+				</article>
+			</section>
+			<section id="about" class="flex">
+				<div class="about-left-container flex">
+					<span>Let me introduce My Self</span>
+					<h2 class="style-h2">About Me</h2>
+
+					<h3 class="style-h3">A developers Tale</h3>
+					<p class="style-p">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+						enim perspiciatis ad nihil reprehenderit sequi quaerat! Ad quam
+						impedit, rerum quibusdam doloribus alias officia veniam, id ipsum
+						deleniti similique exercitationem!
+					</p>
+					<div class="btn-box">
+						<a href="#" class="btn"> Read More</a>
+					</div>
+				</div>
+				<!--  About section right container HTML -->
+				<div class="about-right-container flex">
+					<div class="img-box">
+						<div class="circle-blur"></div>
+						<img src="resources/jj-removebg-preview.png" alt="ME" />
+					</div>
+					<div class="liquid-box">
+						<svg
+							viewBox="0 0 500 500"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="100%"
+							id="blobSvg"
+						>
+							<defs>
+								<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+									<stop offset="0%" style="stop-color: #12f7ff"></stop>
+									<stop offset="100%" style="stop-color: #00f1f9"></stop>
+								</linearGradient>
+							</defs>
+							<path fill="url(#gradient)">
+								<animate
+									attributeName="d"
+									dur="10s"
+									repeatCount="indefinite"
+									values="
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+									 
+								 M473,292Q453,334,426,366.5Q399,399,366,424.5Q333,450,291.5,469Q250,488,210.5,464.5Q171,441,146.5,409.5Q122,378,91.5,353Q61,328,51.5,289Q42,250,63.5,215.5Q85,181,97.5,145.5Q110,110,134.5,70Q159,30,204.5,20Q250,10,297.5,15Q345,20,367.5,65Q390,110,406.5,144Q423,178,458,214Q493,250,473,292Z;
+								
+								 M431.5,285.5Q421,321,413,363Q405,405,370.5,431Q336,457,293,477Q250,497,206,479.5Q162,462,127,435Q92,408,90,362.5Q88,317,75.5,283.5Q63,250,61.5,210.5Q60,171,79,134.5Q98,98,132.5,74Q167,50,208.5,49.5Q250,49,286.5,61.5Q323,74,374.5,74Q426,74,445,117.5Q464,161,453,205.5Q442,250,431.5,285.5Z;
+								 
+								 M453.5,287.5Q432,325,411,357.5Q390,390,362.5,423Q335,456,292.5,468.5Q250,481,215.5,448.5Q181,416,142,406.5Q103,397,95,357.5Q87,318,73.5,284Q60,250,74,216.5Q88,183,89,136.5Q90,90,127,66.5Q164,43,207,45.5Q250,48,294.5,41.5Q339,35,375.5,61.5Q412,88,423.5,130.5Q435,173,455,211.5Q475,250,453.5,287.5Z;
+								
+								 M440.38497,286.9754Q428.85239,323.9508,421.49202,369.04123Q414.13165,414.13165,369.84442,423Q325.55718,431.86835,287.77859,429.15491Q250,426.44148,213.4016,425.94215Q176.80319,425.44282,125.21276,425.91024Q73.62233,426.37767,60.37632,380.05785Q47.13031,333.73804,44.64693,291.86902Q42.16356,250,46.19614,208.63098Q50.22871,167.26196,86.37699,144.89362Q122.52527,122.52527,142.21343,80.13963Q161.9016,37.75399,205.9508,30.28657Q250,22.81914,287.15558,47.27061Q324.31117,71.72208,362.90957,85.10705Q401.50798,98.49202,421.9262,134.17221Q442.34442,169.85239,447.13098,209.9262Q451.91755,250,440.38497,286.9754Z;
+								
+								 M452.65602,285.98643Q424.94573,321.97287,414.9186,363.43216Q404.89146,404.89146,369.5,428.57462Q334.10854,452.25777,292.05427,475.09017Q250,497.92256,214.51357,459.94093Q179.02713,421.9593,142.21707,408.27614Q105.40701,394.59299,96.46128,356.19474Q87.51555,317.79649,78.43415,283.89825Q69.35274,250,75.37309,215.0814Q81.39344,180.1628,80.92538,130.31006Q80.45732,80.45732,118.69474,52.64047Q156.93216,24.82363,203.46608,17.31684Q250,9.81006,294.08819,23.68796Q338.17637,37.56585,357.92538,79.94573Q377.67439,122.32561,400.71509,150.21707Q423.75579,178.10854,452.06105,214.05427Q480.36631,250,452.65602,285.98643Z;
+								
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+								 
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+									 
+								 M473,292Q453,334,426,366.5Q399,399,366,424.5Q333,450,291.5,469Q250,488,210.5,464.5Q171,441,146.5,409.5Q122,378,91.5,353Q61,328,51.5,289Q42,250,63.5,215.5Q85,181,97.5,145.5Q110,110,134.5,70Q159,30,204.5,20Q250,10,297.5,15Q345,20,367.5,65Q390,110,406.5,144Q423,178,458,214Q493,250,473,292Z;
+								
+								 M431.5,285.5Q421,321,413,363Q405,405,370.5,431Q336,457,293,477Q250,497,206,479.5Q162,462,127,435Q92,408,90,362.5Q88,317,75.5,283.5Q63,250,61.5,210.5Q60,171,79,134.5Q98,98,132.5,74Q167,50,208.5,49.5Q250,49,286.5,61.5Q323,74,374.5,74Q426,74,445,117.5Q464,161,453,205.5Q442,250,431.5,285.5Z;
+								 
+								 M453.5,287.5Q432,325,411,357.5Q390,390,362.5,423Q335,456,292.5,468.5Q250,481,215.5,448.5Q181,416,142,406.5Q103,397,95,357.5Q87,318,73.5,284Q60,250,74,216.5Q88,183,89,136.5Q90,90,127,66.5Q164,43,207,45.5Q250,48,294.5,41.5Q339,35,375.5,61.5Q412,88,423.5,130.5Q435,173,455,211.5Q475,250,453.5,287.5Z;
+								
+								 M440.38497,286.9754Q428.85239,323.9508,421.49202,369.04123Q414.13165,414.13165,369.84442,423Q325.55718,431.86835,287.77859,429.15491Q250,426.44148,213.4016,425.94215Q176.80319,425.44282,125.21276,425.91024Q73.62233,426.37767,60.37632,380.05785Q47.13031,333.73804,44.64693,291.86902Q42.16356,250,46.19614,208.63098Q50.22871,167.26196,86.37699,144.89362Q122.52527,122.52527,142.21343,80.13963Q161.9016,37.75399,205.9508,30.28657Q250,22.81914,287.15558,47.27061Q324.31117,71.72208,362.90957,85.10705Q401.50798,98.49202,421.9262,134.17221Q442.34442,169.85239,447.13098,209.9262Q451.91755,250,440.38497,286.9754Z;
+								
+								 M452.65602,285.98643Q424.94573,321.97287,414.9186,363.43216Q404.89146,404.89146,369.5,428.57462Q334.10854,452.25777,292.05427,475.09017Q250,497.92256,214.51357,459.94093Q179.02713,421.9593,142.21707,408.27614Q105.40701,394.59299,96.46128,356.19474Q87.51555,317.79649,78.43415,283.89825Q69.35274,250,75.37309,215.0814Q81.39344,180.1628,80.92538,130.31006Q80.45732,80.45732,118.69474,52.64047Q156.93216,24.82363,203.46608,17.31684Q250,9.81006,294.08819,23.68796Q338.17637,37.56585,357.92538,79.94573Q377.67439,122.32561,400.71509,150.21707Q423.75579,178.10854,452.06105,214.05427Q480.36631,250,452.65602,285.98643Z;
+								
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+								 "
+								></animate>
+							</path>
+						</svg>
+					</div>
+					<div class="liquid-box2">
+						<svg
+							viewBox="0 0 500 500"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="100%"
+							id="blobSvg"
+						>
+							<defs>
+								<linearGradient
+									id="gradient2"
+									x1="0%"
+									y1="0%"
+									x2="0%"
+									y2="100%"
+								>
+									<stop offset="0%" style="stop-color: #ffffff"></stop>
+									<stop offset="100%" style="stop-color: #12f7ff"></stop>
+								</linearGradient>
+							</defs>
+							<path fill="url(#gradient2)">
+								<animate
+									attributeName="d"
+									dur="10s"
+									repeatCount="indefinite"
+									values="
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+									 
+								 M473,292Q453,334,426,366.5Q399,399,366,424.5Q333,450,291.5,469Q250,488,210.5,464.5Q171,441,146.5,409.5Q122,378,91.5,353Q61,328,51.5,289Q42,250,63.5,215.5Q85,181,97.5,145.5Q110,110,134.5,70Q159,30,204.5,20Q250,10,297.5,15Q345,20,367.5,65Q390,110,406.5,144Q423,178,458,214Q493,250,473,292Z;
+								
+								 M431.5,285.5Q421,321,413,363Q405,405,370.5,431Q336,457,293,477Q250,497,206,479.5Q162,462,127,435Q92,408,90,362.5Q88,317,75.5,283.5Q63,250,61.5,210.5Q60,171,79,134.5Q98,98,132.5,74Q167,50,208.5,49.5Q250,49,286.5,61.5Q323,74,374.5,74Q426,74,445,117.5Q464,161,453,205.5Q442,250,431.5,285.5Z;
+								 
+								 M453.5,287.5Q432,325,411,357.5Q390,390,362.5,423Q335,456,292.5,468.5Q250,481,215.5,448.5Q181,416,142,406.5Q103,397,95,357.5Q87,318,73.5,284Q60,250,74,216.5Q88,183,89,136.5Q90,90,127,66.5Q164,43,207,45.5Q250,48,294.5,41.5Q339,35,375.5,61.5Q412,88,423.5,130.5Q435,173,455,211.5Q475,250,453.5,287.5Z;
+								
+								 M440.38497,286.9754Q428.85239,323.9508,421.49202,369.04123Q414.13165,414.13165,369.84442,423Q325.55718,431.86835,287.77859,429.15491Q250,426.44148,213.4016,425.94215Q176.80319,425.44282,125.21276,425.91024Q73.62233,426.37767,60.37632,380.05785Q47.13031,333.73804,44.64693,291.86902Q42.16356,250,46.19614,208.63098Q50.22871,167.26196,86.37699,144.89362Q122.52527,122.52527,142.21343,80.13963Q161.9016,37.75399,205.9508,30.28657Q250,22.81914,287.15558,47.27061Q324.31117,71.72208,362.90957,85.10705Q401.50798,98.49202,421.9262,134.17221Q442.34442,169.85239,447.13098,209.9262Q451.91755,250,440.38497,286.9754Z;
+								
+								 M452.65602,285.98643Q424.94573,321.97287,414.9186,363.43216Q404.89146,404.89146,369.5,428.57462Q334.10854,452.25777,292.05427,475.09017Q250,497.92256,214.51357,459.94093Q179.02713,421.9593,142.21707,408.27614Q105.40701,394.59299,96.46128,356.19474Q87.51555,317.79649,78.43415,283.89825Q69.35274,250,75.37309,215.0814Q81.39344,180.1628,80.92538,130.31006Q80.45732,80.45732,118.69474,52.64047Q156.93216,24.82363,203.46608,17.31684Q250,9.81006,294.08819,23.68796Q338.17637,37.56585,357.92538,79.94573Q377.67439,122.32561,400.71509,150.21707Q423.75579,178.10854,452.06105,214.05427Q480.36631,250,452.65602,285.98643Z;
+								
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+								 
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+									 
+								 M473,292Q453,334,426,366.5Q399,399,366,424.5Q333,450,291.5,469Q250,488,210.5,464.5Q171,441,146.5,409.5Q122,378,91.5,353Q61,328,51.5,289Q42,250,63.5,215.5Q85,181,97.5,145.5Q110,110,134.5,70Q159,30,204.5,20Q250,10,297.5,15Q345,20,367.5,65Q390,110,406.5,144Q423,178,458,214Q493,250,473,292Z;
+								
+								 M431.5,285.5Q421,321,413,363Q405,405,370.5,431Q336,457,293,477Q250,497,206,479.5Q162,462,127,435Q92,408,90,362.5Q88,317,75.5,283.5Q63,250,61.5,210.5Q60,171,79,134.5Q98,98,132.5,74Q167,50,208.5,49.5Q250,49,286.5,61.5Q323,74,374.5,74Q426,74,445,117.5Q464,161,453,205.5Q442,250,431.5,285.5Z;
+								 
+								 M453.5,287.5Q432,325,411,357.5Q390,390,362.5,423Q335,456,292.5,468.5Q250,481,215.5,448.5Q181,416,142,406.5Q103,397,95,357.5Q87,318,73.5,284Q60,250,74,216.5Q88,183,89,136.5Q90,90,127,66.5Q164,43,207,45.5Q250,48,294.5,41.5Q339,35,375.5,61.5Q412,88,423.5,130.5Q435,173,455,211.5Q475,250,453.5,287.5Z;
+								
+								 M440.38497,286.9754Q428.85239,323.9508,421.49202,369.04123Q414.13165,414.13165,369.84442,423Q325.55718,431.86835,287.77859,429.15491Q250,426.44148,213.4016,425.94215Q176.80319,425.44282,125.21276,425.91024Q73.62233,426.37767,60.37632,380.05785Q47.13031,333.73804,44.64693,291.86902Q42.16356,250,46.19614,208.63098Q50.22871,167.26196,86.37699,144.89362Q122.52527,122.52527,142.21343,80.13963Q161.9016,37.75399,205.9508,30.28657Q250,22.81914,287.15558,47.27061Q324.31117,71.72208,362.90957,85.10705Q401.50798,98.49202,421.9262,134.17221Q442.34442,169.85239,447.13098,209.9262Q451.91755,250,440.38497,286.9754Z;
+								
+								 M452.65602,285.98643Q424.94573,321.97287,414.9186,363.43216Q404.89146,404.89146,369.5,428.57462Q334.10854,452.25777,292.05427,475.09017Q250,497.92256,214.51357,459.94093Q179.02713,421.9593,142.21707,408.27614Q105.40701,394.59299,96.46128,356.19474Q87.51555,317.79649,78.43415,283.89825Q69.35274,250,75.37309,215.0814Q81.39344,180.1628,80.92538,130.31006Q80.45732,80.45732,118.69474,52.64047Q156.93216,24.82363,203.46608,17.31684Q250,9.81006,294.08819,23.68796Q338.17637,37.56585,357.92538,79.94573Q377.67439,122.32561,400.71509,150.21707Q423.75579,178.10854,452.06105,214.05427Q480.36631,250,452.65602,285.98643Z;
+								
+								 M436.5,286Q424,322,424.5,373.5Q425,425,373.5,424.5Q322,424,286,443Q250,462,212.5,446Q175,430,130,422.5Q85,415,70.5,372.5Q56,330,60,290Q64,250,49.5,205.5Q35,161,56,119Q77,77,125.5,72Q174,67,212,48.5Q250,30,292,38.5Q334,47,358.5,82Q383,117,412.5,144Q442,171,445.5,210.5Q449,250,436.5,286Z;
+								 "
+								></animate>
+							</path>
+						</svg>
+					</div>
+					<div class="about-me1">
+						<span>10+</span>
+						<p>Year of Experience</p>
+					</div>
+					<div class="about-me2">
+						<span>100+</span>
+						<p>Sucessfull Projects</p>
+					</div>
+					<div class="about-me3">
+						<span>500+</span>
+						<p>Satisfied Customers</p>
+					</div>
+				</div>
+			</section>
+			<section id="skills" class="flex">
+				<div class="skills-left-container flex">
+					<div class="skills-left-image-container">
+						<img src="resources/Ai_juny-removebg-preview.png" alt="" />
+						<div class="rotate-text flex">
+							<div class="text">
+								<p>
+									I am FULL stack developer and I have Expertise in MERN Stack
+								</p>
+							</div>
+							<span><i></i></span>
+						</div>
+					</div>
+				</div>
+				<!--  Right side of Skills Section -->
+				<div class="skills-right-container flex">
+					<div class="skills-line-container flex">
+						<div class="line flex">
+							<p>HTML</p>
+							<div class="bar">
+								<div class="line-bar html"></div>
+							</div>
+							<h5>85</h5>
+						</div>
+						<div class="line flex">
+							<p>CSS</p>
+							<div class="bar">
+								<div class="line-bar css"></div>
+							</div>
+							<h5>75</h5>
+						</div>
+						<div class="line flex">
+							<p>JAVASCRIPT</p>
+							<div class="bar">
+								<div class="line-bar js"></div>
+							</div>
+							<h5>70</h5>
+						</div>
+					</div>
+					<!-- Circle Progress animation -->
+					<div class="skills-circle-container flex">
+						<div class="circle-box flex">
+							<div class="dot"></div>
+							<svg class="skill-circle" height="150" width="150">
+								<circle
+									cx="75"
+									cy="75"
+									r="50"
+									stroke="white"
+									fill="none"
+									style="stroke-dasharray: 251"
+								></circle>
+								<text id="text0" x="65" y="80">80</text>
+							</svg>
+							<h4>BOOTSTRAP</h4>
+						</div>
+						<div class="circle-box flex">
+							<svg class="skill-circle" height="150" width="150">
+								<circle
+									cx="75"
+									cy="75"
+									r="50"
+									stroke="white"
+									fill="none"
+									style="stroke-dasharray: 235"
+								></circle>
+								<text id="text1" x="65" y="80">75</text>
+							</svg>
+							<h4>React Js</h4>
+						</div>
+						<div class="circle-box flex">
+							<svg class="skill-circle" height="150" width="150">
+								<circle
+									cx="75"
+									cy="75"
+									r="50"
+									stroke="white"
+									fill="none"
+									style="stroke-dasharray: 251"
+								></circle>
+								<text id="text2" x="65" y="80">80</text>
+							</svg>
+							<h4>NODE JS</h4>
+						</div>
+						<div class="circle-box flex">
+							<svg class="skill-circle" height="150" width="150">
+								<circle
+									cx="75"
+									cy="75"
+									r="50"
+									stroke="white"
+									fill="none"
+									style="stroke-dasharray: 251"
+								></circle>
+								<text id="text4" x="65" y="80">80</text>
+							</svg>
+							<h4>MONGODB</h4>
+						</div>
+					</div>
+					<div class="try-box flex">
+						<div class="try flex"></div>
+						<div class="bot"></div>
+					</div>
+				</div>
+			</section>
+			<section id="projects" class="flex">
+				<article class="projects-header flex">
+					<h2 class="h2-text">Projects</h2>
+					<!-- <p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, fuga
+						rerum eum vitae, dicta earum culpa optio harum natus laudantium
+						porro praesentium a sequi repellat inventore corporis exercitationem
+						omnis. Eius.
+					</p> -->
+					<ul class="projects-categories flex">
+						<li class="btn new-btn2 projbtn" data-filter="*">All</li>
+						<li class="btn projbtn" data-filter=".frontend">Frontend</li>
+						<li class="btn projbtn" data-filter=".backend">Backend</li>
+						<li class="btn projbtn" data-filter=".fullstack">Fullstack</li>
+					</ul>
+				</article>
+				<div class="projects-container flex">
+					<article class="projects flex mix frontend" data-tilt data-order="1">
+						<div class="project-img">
+							<img src="resources/project1-removebg-png.png" alt="" />
+						</div>
+						<h2>My First Project Name</h2>
+						<p>
+							Description of Project textorem ipsum dolor, sit amet consectetur
+							adipisicing elit. Quis facere veritatis
+						</p>
+						<div class="project-links flex">
+							<a href="" class="new-btn">Demo</a>
+							<a href="" class="new-btn">Github</a>
+						</div>
+					</article>
+
+					<article class="projects flex mix backend" data-tilt data-order="2">
+						<div class="project-img">
+							<img src="resources/project1-removebg-png.png" alt="" />
+						</div>
+						<h2>My BackEnd Project Name</h2>
+						<p>
+							Description of Project textorem ipsum dolor, sit amet consectetur
+							adipisicing elit. Quis facere veritatis
+						</p>
+						<div class="project-links flex">
+							<a href="" class="new-btn">Demo</a>
+							<a href="" class="new-btn">Github</a>
+						</div>
+					</article>
+					<article class="projects flex mix frontend" data-tilt data-order="3">
+						<div class="project-img">
+							<img src="resources/project1-removebg-png.png" alt="" />
+						</div>
+						<h2>My First Project Name</h2>
+						<p>
+							Description of Project textorem ipsum dolor, sit amet consectetur
+							adipisicing elit. Quis facere veritatis
+						</p>
+						<div class="project-links flex">
+							<a href="" class="new-btn">Demo</a>
+							<a href="" class="new-btn">Github</a>
+						</div>
+					</article>
+					<article class="projects flex mix backend" data-tilt data-order="4">
+						<div class="project-img">
+							<img src="resources/project1-removebg-png.png" alt="" />
+						</div>
+						<h2>My First Project Name</h2>
+						<p>
+							Description of Project textorem ipsum dolor, sit amet consectetur
+							adipisicing elit. Quis facere veritatis
+						</p>
+						<div class="project-links flex">
+							<a href="" class="new-btn">Demo</a>
+							<a href="" class="new-btn">Github</a>
+						</div>
+					</article>
+					<article class="projects flex mix fullstack" data-tilt data-order="5">
+						<div class="project-img">
+							<img src="resources/project1-removebg-png.png" alt="" />
+						</div>
+						<h2>My First Project Name</h2>
+						<p>
+							Description of Project textorem ipsum dolor, sit amet consectetur
+							adipisicing elit. Quis facere veritatis
+						</p>
+						<div class="project-links flex">
+							<a href="" class="new-btn">Demo</a>
+							<a href="" class="new-btn">Github</a>
+						</div>
+					</article>
+					<article class="projects flex mix frontend" data-tilt data-order="6">
+						<div class="project-img">
+							<img src="resources/project1-removebg-png.png" alt="" />
+						</div>
+						<h2>My First Project Name</h2>
+						<p>
+							Description of Project textorem ipsum dolor, sit amet consectetur
+							adipisicing elit. Quis facere veritatis
+						</p>
+						<div class="project-links flex">
+							<a href="" class="new-btn">Demo</a>
+							<a href="" class="new-btn">Github</a>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section id="contact" class="flex">
+				<div class="contact-container flex">
+					<div class="contact-box flex">
+						<div class="contact-icon-container flex">
+							<ul class="contact-list flex">
+								<li class="flex">
+									<a
+										href="mailto:juny@live.in?subject=feedback"
+										class="contact-list"
+										target="_blank"
+									>
+										<i class="fa-solid fa-envelope"></i>
+									</a>
+									<span></span>
+								</li>
+								<li>
+									<a
+										href="https://m.me/190987910757104"
+										class="contact-list"
+										target="_blank"
+									>
+										<i class="fa-brands fa-facebook-messenger"></i>
+									</a>
+									<span></span>
+								</li>
+								<li>
+									<a
+										href="https://wa.me/+917780909460"
+										class="contact-list"
+										target="_blank"
+									>
+										<i class="fa-brands fa-whatsapp"></i>
+									</a>
+									<span></span>
+								</li>
+								<li>
+									<a
+										href="tel:+917780909460"
+										class="contact-list"
+										target="_blank"
+									>
+										<i class="fa-solid fa-phone"></i>
+									</a>
+									<span></span>
+								</li>
+							</ul>
+						</div>
+						<div class="contact-form-container flex">
+							<div class="contact-main-text">
+								<h2 class="h2-text">Contact Me</h2>
+								<span>get in touch with me</span>
+							</div>
+							<form
+								action="https://formsubmit.co/317633d759c5bfb80801b09abf4e4486"
+								method="POST"
+								class="contact-form flex"
+							>
+								<div class="input-box flex">
+									<input
+										type="text"
+										name="first-name"
+										placeholder="First Name"
+										required
+									/>
+									<input
+										type="text"
+										name="last-name"
+										placeholder="Last Name"
+										required
+									/>
+								</div>
+								<input type="email" name="email" placeholder="Email" required />
+								<input
+									type="text"
+									name="subject"
+									placeholder="Subject"
+									required
+								/>
+								<textarea name="message" rows="5" placeholder="Message">
+								</textarea>
+								<div class="formBtn">
+									<button type="submit" class="btn">Send Message</button>
+									<button type="reset" class="btn">reset form</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer id="footer" class="flex">
+				<div class="waves">
+					<div class="wave"></div>
+					<div class="wave"></div>
+					<div class="wave"></div>
+					<div class="wave"></div>
+				</div>
+				<ul class="footer-icon flex">
+					<li class="flex">
+						<a
+							href="mailto:juny@live.in?subject=feedback"
+							class="contact-list"
+							target="_blank"
+						>
+							<i class="fa-solid fa-envelope"></i>
+						</a>
+						<span></span>
+					</li>
+					<li>
+						<a
+							href="https://m.me/190987910757104"
+							class="contact-list"
+							target="_blank"
+						>
+							<i class="fa-brands fa-facebook-messenger"></i>
+						</a>
+						<span></span>
+					</li>
+					<li>
+						<a
+							href="https://wa.me/+917780909460"
+							class="contact-list"
+							target="_blank"
+						>
+							<i class="fa-brands fa-whatsapp"></i>
+						</a>
+					</li>
+					<li>
+						<a href="tel:+917780909460" class="contact-list" target="_blank">
+							<i class="fa-solid fa-phone"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="contact-list" target="_blank">
+							<i class="fa-brands fa-linkedin"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="contact-list" target="_blank">
+							<i class="fa-brands fa-github"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer-menu flex">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About </a></li>
+					<li><a href="#skills">Skills </a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact </a></li>
+				
+				</ul>
+				<p>Copyright &#169 2024 by Dr Junaid || All rights reserved</p>
+			</footer>
+		</div>
+
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script src="mix/dist/mixitup.min.js"></script>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script src="vanilla-tilt.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
