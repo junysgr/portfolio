@@ -54,6 +54,7 @@ dayNight.addEventListener("click", () => {
 });
 
 // Typed js
+// sdfsddf
 var typed = new Typed("#text", {
 	strings: ["Developer", "Coder", "Mern Expert", "Bazeegar", "Tabaardaar"],
 	loop: true,
